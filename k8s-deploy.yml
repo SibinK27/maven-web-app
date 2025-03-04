@@ -5,8 +5,6 @@ metadata:
  name: mavenwebappdeployment
 spec:
  replicas: 2
- strategy: 
-    type: Recreate
  selector: 
    matchLabels: 
      app: mavenwebapp
@@ -18,7 +16,7 @@ spec:
   spec: 
     containers:
     - name: mavenwebappcontainer
-      image: vinodses/mavenwebapp
+      image: SibinK27/maven-web-app
       imagePullPolicy: Always
       ports:
       - containerPort: 8080
